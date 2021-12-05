@@ -1,12 +1,21 @@
+:root {
+  --org: #ff4622;
+  --plotis: 1000px;
+  --sonis-atstumas: calc((100% - var(--plotis)) / 2);
+  --main-width: calc(100% + var(--sonis-atstumas));
+  --text-width: calc(var(--plotis) * 0.4);
+  --text-margin: calc(var(--plotis) * 0.1);
+  --image-width: calc(100% - var(--plotis) / 2);
+}
+
 body {
   font-family: cursive;
 }
 
 header {
   display: inline-block;
-  width: 1000px;
-  margin-left: calc((100% - 1000px) / 2);
-  background-color: chartreuse;
+  width: var(--plotis);
+  margin-left: var(--sonis-atstumas);
 }
 
 heder > image {
@@ -29,27 +38,38 @@ nav > a {
 }
 
 nav > a:hover {
-  border-color: #ff4622;
+  border-color: var(--org);
 }
 
 nav > a:first-child {
   margin-left: 0px;
-  border-color: #ff4622;
+  border-color: var(--org);
 }
 
 main {
+  display: inline-block;
+  width: var(--main-width);
+  margin-left: var(--sonis-atstumas);
 }
 
 div {
+  float: left;
+  width: var(--text-width);
+  margin-right: var(--text-margin);
 }
 
 h1 {
+  display: inline-block;
+  width: 100%;
 }
 
 h1 > span {
+  color: var(--org);
 }
 
 p {
+  display: inline-block;
+  width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -57,4 +77,6 @@ div > a {
 }
 
 main > image {
+  float: left;
+  width: var(--image-width);
 }
