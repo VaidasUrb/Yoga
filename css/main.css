@@ -50,17 +50,21 @@ main {
   display: inline-block;
   width: var(--main-width);
   margin-left: var(--sonis-atstumas);
+  margin-top: 60px;
 }
 
 div {
   float: left;
   width: var(--text-width);
   margin-right: var(--text-margin);
+  margin-top: 70px;
 }
 
 h1 {
   display: inline-block;
   width: 100%;
+  font-size: 40px;
+  margin: 0px;
 }
 
 h1 > span {
@@ -74,6 +78,19 @@ p {
 }
 
 div > a {
+  display: inline-block;
+  background-color: var(--org);
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+div > a:hover {
+  background-color: #fff;
+  color: var(--org);
 }
 
 main > image {
